@@ -1,0 +1,24 @@
+.active-link {
+  font-weight: bold;
+  color: #f8f3f4 !important;
+  border-bottom: 2px solid #696f78;
+}
+
+.nav_logo{
+  width:40px;
+  height:40px;
+}
+
+.card-hover {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-5px) scale(1.02); 
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15);
+  }
+
+  .btn-close-white {
+    filter: invert(1);
+  }
