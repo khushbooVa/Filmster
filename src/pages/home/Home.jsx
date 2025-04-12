@@ -4,12 +4,12 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   getMovieDetails,
   MovieSearchFunc,
-} from "../../redux/reducers/movie-reducer/MovieReducer";
+} from "../../redux/thunk/movie/MovieThunk";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { clearMovies } from "../../redux/slices/search-movie/MovieSlice";
 import CardDetails from "../../components/ui/CardDetails";
 import { addToWatchlist } from "../../redux/slices/search-movie/WatchListSlice";
-import { toast, ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from "react-toastify";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -30,7 +30,6 @@ const Home = () => {
   };
 
   const notify = () => toast.info("Added to watchlist!");
-
 
   const fetchMoreData = () => {
     const nextPage = page + 1;
@@ -57,7 +56,7 @@ const Home = () => {
   return (
     <div className="container py-5">
       <h1 className="text-center mb-4 text-primary fw-bold"> Movie Search</h1>
-<ToastContainer/>
+      <ToastContainer />
       <div className="row justify-content-center mb-5">
         <div className="col-md-8">
           <div className="input-group ">

@@ -1,42 +1,42 @@
-<<<<<<< HEAD
-# Filmster
-Search for Movies &amp; More
-=======
-# React Application with Vite, Tailwind CSS, and Redux Toolkit
+# 🎬 Filmster
 
-This project is a modern React application, built with **Vite** for blazing-fast development and optimized builds. It leverages **Tailwind CSS** for a utility-first approach to styling, ensuring rapid development and responsive designs. Additionally, **Redux Toolkit** is used for efficient and scalable state management.
+ - Search for Movies & More :
 
-## Features
-
-- **Vite** for faster builds and hot module replacement.
-- **React** as the robust and popular library for building user interfaces.
-- **Tailwind CSS** for efficient and customizable styling.
-- **Redux Toolkit** for simplified and scalable state management.
-- Scalable and maintainable architecture.
+A modern and scalable **React** application built with **Vite**, **Redux Toolkit**, and **Bootstrap CSS**, allowing users to search movies, view details, manage watchlists, and more.
 
 ---
 
-## Getting Started
+## 🔥 Features
 
-Follow the steps below to set up and run the application locally:
+- ✅ **User Authentication**: Users can log in and are automatically navigated to the home page after successful login.
+- 🔍 **Movie Search**: Integrated with the [OMDB API](https://www.omdbapi.com/) to fetch and display movies based on search queries.
+- 🔄 **Infinite Scrolling**: Automatically fetches more movies as the user scrolls instead of using pagination.
+- 🎴 **Movie Details**: Displays full movie information on card click using the movie’s IMDb ID.
+- ⭐ **Watchlist Functionality**: Users can add movies to a personalized watchlist and also remove them as needed.
+- 💾 **Redux Persist**: Ensures logged-in user data and watchlist data are saved even after browser refreshes.
+- ⚛️ **React + Vite**: Fast development environment with hot module replacement and optimized builds.
+- 🎨 **Bootstrap CSS**: For responsive and clean UI components.
+- 🧠 **Redux Toolkit**: Efficient and scalable state management.
 
-### Prerequisites
+---
+
+## 🚀 Getting Started
+
+Follow these steps to set up and run the project locally.
+
+### 📦 Prerequisites
 
 Ensure you have the following installed:
 
 - [Node.js](https://nodejs.org/) (v20 or later recommended)
-- [Git](https://git-scm.com/)
+- [Git](https://github.com/khushbooVa/Filmster)
 
-### Installation and Setup
+### 🔧 Installation & Setup
 
 1. **Clone the Repository**
 
-   Clone the repository to your local machine using the command below:
-
    ```bash
-   git clone https://github.com/cis-muzahid/ai-companion-frontend.git
-   cd ai-companion-frontend
-   ```
+   git clone https://github.com/khushbooVa/Filmster.git
 
 2. **Install Dependencies**
 
@@ -88,14 +88,11 @@ A quick overview of the project's folder structure:
 ├── public/               # Static assets
 ├── src/                  # Source code
 │   ├── components/       # Reusable React components
-    ├── assets/           # Images Added here
-    ├── api/ 
     ├── config/ 
         ├── utils.js
         ├── constants.js 
-    ├── hooks/            #Reusable Custom hooks 
 │   ├── redux/            # Redux slices and state management logic
-        ├── reducers/  
+        ├── thunk/  
         ├── actions/ 
         ├── slices/  
         ├── store/ 
@@ -108,4 +105,3 @@ A quick overview of the project's folder structure:
 └── vite.config.js        # Vite configuration
 ```
 
->>>>>>> a47f14f (first commit)

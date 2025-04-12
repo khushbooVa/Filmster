@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { loginUser } from '../../../redux/reducers/login-reducer/LoginReducer';
+import { loginUser } from '../../../redux/thunk/login/LoginThunk';
 import { validateEmail, validatePassword } from '../../../config/constants';
 import { login } from '../../../redux/slices/login-slice/LoginSlice';
 import { useNavigate } from 'react-router';
 import { RouterPathName } from '../../../routes/config';
 import { toast, ToastContainer } from 'react-toastify';
+import { setWatchList } from '../../../redux/slices/search-movie/WatchListSlice';
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -50,6 +51,11 @@ const navigate=useNavigate()
     }
     if (validateEmail(formData.email) && validatePassword(formData.password)) {
       dispatch(login(formData));
+      const savedWatchlist = localStorage.getItem(`watchlist_${formData?.email}`);
+      if (savedWatchlist) {
+        const parsedWatchlist = JSON.parse(savedWatchlist);
+        dispatch(setWatchList(parsedWatchlist));
+      }
        toast.success('Login successful!');
        setTimeout(() => {
         navigate(RouterPathName.home);

@@ -9,13 +9,15 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const { watchlist } = useSelector((state) => state.watchlist);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { name } = useSelector((state) => state.login);
+  const { name, data } = useSelector((state) => state.login);
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
   };
 
   const handleLogout = () => {
+    
+  localStorage.setItem(`watchlist_${data?.email}`, JSON.stringify(watchlist));
     dispatch(logout());
     dispatch(clearWatchlist());
   };

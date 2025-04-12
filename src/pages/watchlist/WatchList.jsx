@@ -8,13 +8,12 @@ import {
   resetCount,
 } from '../../redux/slices/search-movie/WatchListSlice';
 import CardDetails from '../../components/ui/CardDetails';
-import { getMovieDetails } from '../../redux/reducers/movie-reducer/MovieReducer';
+import { getMovieDetails } from '../../redux/thunk/movie/MovieThunk';
 import { toast, ToastContainer } from 'react-toastify';
 
 const WatchList = () => {
   const dispatch = useDispatch();
-    const { isDetails } = useSelector((state) => state.movies);
-  
+  const { isDetails } = useSelector((state) => state.movies);
   const { watchlist, Count } = useSelector((state) => state.watchlist);
 
   useEffect(() => {

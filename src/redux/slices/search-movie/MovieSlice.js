@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getMovieDetails, MovieSearchFunc } from "../../reducers/movie-reducer/MovieReducer";
+import { getMovieDetails, MovieSearchFunc } from "../../thunk/movie/MovieThunk";
 
 //default value
 const initialState = {
