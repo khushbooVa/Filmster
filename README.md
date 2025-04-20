@@ -77,6 +77,8 @@ Ensure you have the following installed:
    ```bash
    npm run preview
    ```
+3.Check out the live demo of Filmster here:
+👉 https://classy-melomakarona-1ad3ce.netlify.app/
 
 ---
 
